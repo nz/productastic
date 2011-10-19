@@ -14,9 +14,24 @@ group :assets do
   gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass', '1.3.1'
 end
 
 gem 'jquery-rails'
+
+gem 'sunspot_rails', git: 'http://github.com/sunspot/sunspot.git'
+
+group :development do
+  
+  # Run a local Solr instance in development
+  gem 'sunspot_solr', git: 'http://github.com/sunspot/sunspot.git'
+  
+  # Foreman is great for managing running processes
+  gem 'foreman', '0.25.0'
+  
+  # Show indexing progress
+  gem 'progress_bar', '0.4.0'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

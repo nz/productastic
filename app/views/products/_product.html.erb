@@ -1,0 +1,19 @@
+<%= content_tag_for :div, product do %>
+
+  <h3>
+    <% if defined?(search_hit) && search_hit.highlight(:name) %>
+      <%= smart_truncate(smart_highlight(search_hit, :name)) %>
+    <% else %>
+      <%= product.name %>
+    <% end %>
+  </h3>
+  
+  <div class="description">
+    <% if defined?(search_hit) && search_hit.highlight(:description) %>
+      <%= smart_truncate(smart_highlight(search_hit, :description)) %>
+    <% else %>
+      <%= product.description %>
+    <% end %>
+  </div>
+  
+<% end %>

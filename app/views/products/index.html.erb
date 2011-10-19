@@ -1,0 +1,12 @@
+<%= form_tag '/', method: 'get' do %>
+  <%= search_field_tag 'q', params[:q] %>
+  <%= button_tag 'Search', class: 'btn' %>
+<% end %>
+
+<div class="products">
+  <% if @search %>
+    <%= render partial: 'search_hit', collection: @search.hits %>
+  <% else %>
+    <%= render @products %>
+  <% end %>
+</div>

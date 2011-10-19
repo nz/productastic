@@ -29,7 +29,7 @@ module ApplicationHelper
   
   # Center truncation around an HTML tag, so we can focus on highlights
   def smart_truncate(str, options={})
-    str[/[^ ]* .{,40}<em.*em>.{,40}[^ ]*/]
+    str[/[^ ]* ?.{,20}<em[^>]*>.*em>.{,20}[^ ]* ?[^ ]*/]
   end
   
 end

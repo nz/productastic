@@ -8,6 +8,10 @@
 
 @import "bootstrap";
 
+#page_header {
+  margin-top: $baseline;
+}
+
 h1, h2, h3 {
   font-weight: normal;
 }

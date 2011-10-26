@@ -58,58 +58,58 @@
     <dynamicField name="*_dtms" type="tdate" stored="true"  multiValued="true"  indexed="true"/>
     <dynamicField name="*_dts"  type="tdate" stored="true"  multiValued="false" indexed="true"/>
     
-    <dynamicField name="*_e" type="sdouble" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_em" type="sdouble" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ems" type="sdouble" stored="true" multiValued="true" indexed="true"/>
-    <dynamicField name="*_es" type="sdouble" stored="true" multiValued="false" indexed="true"/>
+    <dynamicField name="*_e"   type="sdouble" stored="false" multiValued="false" indexed="true"/>
+    <dynamicField name="*_em"  type="sdouble" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ems" type="sdouble" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_es"  type="sdouble" stored="true"  multiValued="false" indexed="true"/>
     
-    <dynamicField name="*_et" stored="false" termVectors="true" type="tdouble" multiValued="false" indexed="true"/>
-    <dynamicField name="*_etm" stored="false" termVectors="true" type="tdouble" multiValued="true" indexed="true"/>
-    <dynamicField name="*_etms" stored="true" termVectors="true" type="tdouble" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ets" stored="true" termVectors="true" type="tdouble" multiValued="false" indexed="true"/>
+    <dynamicField name="*_et"   type="tdouble" stored="false" termVectors="true" multiValued="false" indexed="true"/>
+    <dynamicField name="*_etm"  type="tdouble" stored="false" termVectors="true" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_etms" type="tdouble" stored="true"  termVectors="true" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ets"  type="tdouble" stored="true"  termVectors="true" multiValued="false" indexed="true"/>
     
-    <dynamicField name="*_f" type="sfloat" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_fm" type="sfloat" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_fms" type="sfloat" stored="true" multiValued="true" indexed="true"/>
-    <dynamicField name="*_fs" type="sfloat" stored="true" multiValued="false" indexed="true"/>
+    <dynamicField name="*_f"   type="sfloat" stored="false" multiValued="false" indexed="true"/>
+    <dynamicField name="*_fm"  type="sfloat" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_fms" type="sfloat" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_fs"  type="sfloat" stored="true"  multiValued="false" indexed="true"/>
     
-    <dynamicField name="*_ft" type="tfloat" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_ftm" type="tfloat" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ftms" type="tfloat" stored="true" multiValued="true" indexed="true"/>
-    <dynamicField name="*_fts" type="tfloat" stored="true" multiValued="false" indexed="true"/>
+    <dynamicField name="*_ft"   type="tfloat" stored="false" multiValued="false" indexed="true"/>
+    <dynamicField name="*_ftm"  type="tfloat" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ftms" type="tfloat" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_fts"  type="tfloat" stored="true"  multiValued="false" indexed="true"/>
     
     <dynamicField name="*_i"   type="sint" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_im"  type="sint" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ims" stored="true"  type="sint" multiValued="true" indexed="true"/>
-    <dynamicField name="*_is"  stored="true"  type="sint" multiValued="false" indexed="true"/>
+    <dynamicField name="*_im"  type="sint" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ims" type="sint" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_is"  type="sint" stored="true"  multiValued="false" indexed="true"/>
     
     <dynamicField name="*_it"   type="tint" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_itm"  type="tint" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_itms" stored="true"  type="tint" multiValued="true" indexed="true"/>
-    <dynamicField name="*_its"  stored="true"  type="tint" multiValued="false" indexed="true"/>
+    <dynamicField name="*_itm"  type="tint" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_itms" type="tint" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_its"  type="tint" stored="true"  multiValued="false" indexed="true"/>
     
     <dynamicField name="*_l"   type="slong" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_lm"  type="slong" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_lms" stored="true"  type="slong" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ls"  stored="true"  type="slong" multiValued="false" indexed="true"/>
+    <dynamicField name="*_lm"  type="slong" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_lms" type="slong" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ls"  type="slong" stored="true"  multiValued="false" indexed="true"/>
     
     <dynamicField name="*_s"   type="string" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="*_sm"  type="string" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_sms" stored="true"  type="string" multiValued="true" indexed="true"/>
-    <dynamicField name="*_ss"  stored="true"  type="string" multiValued="false" indexed="true"/>
+    <dynamicField name="*_sm"  type="string" stored="false" multiValued="true"  indexed="true"/>
+    <dynamicField name="*_sms" type="string" stored="true"  multiValued="true"  indexed="true"/>
+    <dynamicField name="*_ss"  type="string" stored="true"  multiValued="false" indexed="true"/>
     
     <dynamicField name="*_text"   type="text" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_texts"  stored="true"  type="text" multiValued="true" indexed="true"/>
-    <dynamicField name="*_textsv" stored="true"  termVectors="true" type="text" multiValued="true" indexed="true"/>
-    <dynamicField name="*_textv"  stored="false" termVectors="true" type="text" multiValued="true" indexed="true"/>
+    <dynamicField name="*_texts"  type="text" stored="true"  multiValued="true" indexed="true"/>
+    <dynamicField name="*_textsv" type="text" stored="true"  termVectors="true" multiValued="true" indexed="true"/>
+    <dynamicField name="*_textv"  type="text" stored="false" termVectors="true" multiValued="true" indexed="true"/>
 
-    <dynamicField name="*_text_en"   type="text" stored="false" multiValued="true" indexed="true"/>
-    <dynamicField name="*_text_ens"  type="text" stored="true" multiValued="true" indexed="true"/>
-    <dynamicField name="*_text_ensv" stored="true" termVectors="true" type="text" multiValued="true" indexed="true"/>
-    <dynamicField name="*_text_env"  stored="false" termVectors="true" type="text" multiValued="true" indexed="true"/>
+    <dynamicField name="*_text_en"   type="text_en" stored="false" multiValued="true" indexed="true"/>
+    <dynamicField name="*_text_ens"  type="text_en" stored="true"  multiValued="true" indexed="true"/>
+    <dynamicField name="*_text_ensv" type="text"    stored="true"  termVectors="true" multiValued="true" indexed="true"/>
+    <dynamicField name="*_text_env"  type="text"    stored="false" termVectors="true" multiValued="true" indexed="true"/>
     
-    <dynamicField name="_local*" type="tdouble" stored="false" multiValued="false" indexed="true"/>
-    <dynamicField name="random_*" type="rand" stored="false" multiValued="false" indexed="true"/>
+    <dynamicField name="_local*"  type="tdouble" stored="false" multiValued="false" indexed="true"/>
+    <dynamicField name="random_*" type="rand"    stored="false" multiValued="false" indexed="true"/>
   </fields>
   <uniqueKey>id</uniqueKey>
   <defaultSearchField>text</defaultSearchField>

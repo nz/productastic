@@ -1,10 +1,17 @@
-<%= form_tag '/', method: 'get' do %>
-  <%= search_field_tag 'q', params[:q] %>
-  <%= button_tag 'Search', class: 'btn' %>
-<% end %>
+<div class="row">
+  <div class="span8 columns">
+    <%= form_tag '/', method: 'get' do %>
+      <%= search_field_tag 'q', params[:q] %>
+      <%= button_tag 'Search', class: 'btn' %>
+    <% end %>
+  </div>
+  <div class="span8 columns">
+    <code><%= @search.facet_response.inspect %></code>
+  </div>
+</div>
 
 <div class="products">
-  <% if @search %>
+  <% if params[:q].present? %>
     <%= render partial: 'search_hit', collection: @search.hits %>
   <% else %>
     <%= render @products %>

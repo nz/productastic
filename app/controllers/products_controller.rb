@@ -1,12 +1,18 @@
 class ProductsController < ApplicationController
   
   def index
-    if params[:q] && params[:q].strip.present?
-      @search = Product.search(params[:q])
-    else
-      @search = Product.search('*:*')
-      @products = Product.scoped
-    end
+    @search = Product.search(params[:q])
+    @products = Product.scoped
+
+    # Process the ugly facet array into a hash of {term: freq}, sorted by term.
+    # TODO: Contribute the following back to Sunspot.
+    
+    @facets = {}
+    array = @search.facet_response["facet_fields"]["text"].dup
+    @facets[array.shift] = array.shift while array.length > 0
+    @facet_count_min = @facets.values.min
+    @facet_count_max = @facets.values.max
+    @facets = @facets.sort_by{|term, freq| term }
   end
   
 end

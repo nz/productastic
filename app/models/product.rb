@@ -8,12 +8,16 @@ class Product < ActiveRecord::Base
   
   def self.search(query)
     solr_search do
+      
       keywords query do
         highlight :name, :description
-      end
+      end unless query.blank?
+      
       adjust_solr_params do |params|
-        params[:facet] = true
-        params[:'facet.field'] = 'name_texts'
+        params['facet'] = 'on'
+        params['facet.field'] = 'text'
+        params['facet.limit'] = 20
+        params['facet.query'] = '*:*'
       end
     end
   end

@@ -5,8 +5,8 @@
       <%= button_tag 'Search', class: 'btn' %>
     <% end %>
   </div>
-  <div class="span8 columns">
-    <code><%= @search.facet_response.inspect %></code>
+  <div class="span8 columns facet-cloud">
+    <%= render 'term_cloud' %>
   </div>
 </div>
 

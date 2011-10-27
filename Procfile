@@ -1,1 +1,1 @@
-solr: rake sunspot:solr:run
+solr: sunspot-solr run -s solr

@@ -47,3 +47,14 @@ h1, h2, h3 {
   max-height: 220px * 3;
   overflow: auto;
 }
+
+.facet-cloud {
+  font-family: monospace;
+  .facet-value {
+    line-height: $baseline;
+    .selected {
+      font-size: 2em;
+      color: darken($linkColor, 30%);
+    }
+  }
+}

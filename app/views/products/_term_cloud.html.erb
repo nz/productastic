@@ -1,0 +1,11 @@
+<% @facets.each do |term, count| %>
+  <% if params[:q] =~ %r{\b#{term}\b} %>
+    <span class="facet-value selected">
+      <%= link_to term, {q: params[:q].gsub(term, "").gsub(/ +/ ," ").strip}, class: "selected" %>
+    </span>
+  <% else %>
+    <span class="facet-value" style="font-size: <%= 1 + ((count.to_f - @facet_count_min) / @facet_count_max) %>em">
+      <%= link_to term, q: "#{params[:q]} #{term}" %>
+    </span>
+  <% end %>
+<% end %>

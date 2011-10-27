@@ -19,6 +19,15 @@
       </analyzer>
     </fieldType>
     
+    <fieldType name="text_stopwords" class="solr.TextField" omitNorms="false">
+      <analyzer>
+        <tokenizer class="solr.StandardTokenizerFactory"/>
+        <filter class="solr.StandardFilterFactory"/>
+        <filter class="solr.LowerCaseFilterFactory"/>
+        <filter class="solr.StopFilterFactory" words="stopwords.txt" ignoreCase="true"/>
+      </analyzer>
+    </fieldType>
+    
     <fieldType name="boolean" class="solr.BoolField" omitNorms="true"/>
     <fieldType name="date" class="solr.DateField" omitNorms="true"/>
     <fieldType name="rand" class="solr.RandomSortField" omitNorms="true"/>
@@ -39,9 +48,10 @@
     <field name="id"         type="string"  stored="true"  multiValued="false" indexed="true"/>
     <field name="type"       type="string"  stored="false" multiValued="true"  indexed="true"/>
     <field name="class_name" type="string"  stored="false" multiValued="false" indexed="true"/>
-    <field name="text"       type="text"    stored="false" multiValued="true"  indexed="true"/>
     <field name="lat"        type="tdouble" stored="true"  multiValued="false" indexed="true"/>
     <field name="lng"        type="tdouble" stored="true"  multiValued="false" indexed="true"/>
+
+    <field name="text" type="text_stopwords" stored="false" multiValued="true" indexed="true"/>
     
     <dynamicField name="*_b"   type="boolean" stored="false" multiValued="false" indexed="true"/>
     <dynamicField name="*_bm"  type="boolean" stored="false" multiValued="true"  indexed="true"/>
@@ -111,7 +121,14 @@
     <dynamicField name="_local*"  type="tdouble" stored="false" multiValued="false" indexed="true"/>
     <dynamicField name="random_*" type="rand"    stored="false" multiValued="false" indexed="true"/>
   </fields>
+  
   <uniqueKey>id</uniqueKey>
   <defaultSearchField>text</defaultSearchField>
   <solrQueryParser defaultOperator="AND"/>
+  
+  <copyField source="*_text"   dest="text"/>
+  <copyField source="*_texts"  dest="text"/>
+  <copyField source="*_textsv" dest="text"/>
+  <copyField source="*_textv"  dest="text"/>
+  
 </schema>

@@ -5,3 +5,5 @@ tmp/
 .sass-cache/
 solr/data
 log/*.lck
+solr/*/index
+solr/*/spellchecker

@@ -6,10 +6,8 @@ class ProductsController < ApplicationController
 
     # Process the ugly facet array into a hash of {term: freq}, sorted by term.
     # TODO: Contribute the following back to Sunspot.
-    
-    @facets = {}
-    array = @search.facet_response["facet_fields"]["text"].dup
-    @facets[array.shift] = array.shift while array.length > 0
+
+    @facets = Hash[*@search.facet_response["facet_fields"]["text"]]
     @facet_count_min = @facets.values.min
     @facet_count_max = @facets.values.max
     @facets = @facets.sort_by{|term, freq| term }

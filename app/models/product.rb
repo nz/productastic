@@ -17,8 +17,8 @@ class Product < ActiveRecord::Base
         params['facet'] = 'on'
         params['facet.field'] = 'text'
         params['facet.limit'] = 20
-        params['facet.query'] = '*:*'
       end
+      
     end
   end
   

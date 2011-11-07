@@ -19,12 +19,12 @@ end
 
 gem 'jquery-rails'
 
-gem 'sunspot_rails', '1.3.0.rc5'
+gem 'sunspot_rails', '1.3.0.rc6'
 
 group :development do
   
   # Run a local Solr instance in development
-  gem 'sunspot_solr', '1.3.0.rc5'
+  gem 'sunspot_solr', '1.3.0.rc6'
   
   # Foreman is great for managing running processes
   gem 'foreman', '0.25.0'
